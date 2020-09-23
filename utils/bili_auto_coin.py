@@ -1,12 +1,11 @@
 import urllib.request
 import urllib.parse
 import json
-import time
-
+import os
 # 在这里填你的csrt效验码
-csrf='4f7a433483e3f8f4da89d179dbcd459b'
+csrf = os.environ['bili_csrf']
 # 在这里填上你的b站cookie
-cookie="CURRENT_FNVAL=16; _uuid=94E0367D-94F9-F508-2325-2813805E83A676827infoc; buvid3=DDF16585-2C75-4C65-912D-A4F050A0D69453929infoc; LIVE_BUVID=AUTO3715823914788382; rpdid=|(kmR)R||)~Y0J'ul)kJmuR~m; im_notify_type_5794786=0; sid=aams03rg; DedeUserID=5794786; DedeUserID__ckMd5=f80d63961608c14b; SESSDATA=82588e26%2C1609827046%2Cc30ae*71; bili_jct=4f7a433483e3f8f4da89d179dbcd459b; CURRENT_QUALITY=74; bp_video_offset_5794786=415965499558772306; bp_t_offset_5794786=416195031200730287; PVID=1; _dfcaptcha=8d2a82570a4ce33db497a5c0c9a80c51; bfe_id=fdfaf33a01b88dd4692ca80f00c2de7f"
+cookie = os.environ['bili_cookie']
 
 def SeadAdd(Avcode,cookie,csrf):
     url = 'https://api.bilibili.com/x/web-interface/coin/add'
