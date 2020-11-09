@@ -25,6 +25,7 @@ def main():
     opener = urllib.request.build_opener(
         urllib.request.HTTPCookieProcessor(cj))
     r = opener.open(req)
+     
      response = r.read().decode('utf-8')
       logincheck = json.loads(response)
        if logincheck['ret'] != 1:
