@@ -6,8 +6,8 @@ import os
 def main():
     ## 登录
     account={
-        'email':os.environ['feiji_email'],
-        "passwd":os.environ['feiji_pass']
+        'email':os.environ['FEIJI_EMAIL'],
+        "passwd":os.environ['FEIJI_PASS']
     }
 
     url = "https://dash.cdpc.fun/auth/login"
