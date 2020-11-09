@@ -1,4 +1,7 @@
-from  utils import *
+from utils import bili_auto_coin,tieba_sign,cdpc,ypork
 
-utils.bili_auto_coin.main()
-utils.tieba_sign.main()
+
+bili_auto_coin.main()
+tieba_sign.main()
+cdpc.main()
+ypork.main()
