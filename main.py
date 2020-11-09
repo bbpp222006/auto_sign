@@ -1,5 +1,4 @@
-import utils.bili_auto_coin
-import utils.tieba_sign
+from  utils import *
 
 utils.bili_auto_coin.main()
 utils.tieba_sign.main()
