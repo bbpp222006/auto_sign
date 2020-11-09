@@ -159,7 +159,7 @@ def encodeData(data):
 
 def client_sign(bduss, tbs, fid, kw):
     # 客户端签到
-    logger.info("开始签到贴吧：" + kw)
+    logger.info("开始签到贴吧：" )
     data = copy.copy(SIGN_DATA)
     data.update({BDUSS: bduss, FID: fid, KW: kw, TBS: tbs, TIMESTAMP: str(int(time.time()))})
     data = encodeData(data)

@@ -24,4 +24,6 @@ jobs:
           BDUSS: ${{ secrets.BDUSS }}
           bili_csrf: ${{ secrets.bili_csrf }}
           bili_cookie: ${{ secrets.bili_cookie }}
+          feiji_email: ${{ secrets.FEIJI_EMAIL }}
+          feiji_pass: ${{ secrets.FEIJI_PASS }}
         run: python main.py
