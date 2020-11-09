@@ -6,7 +6,8 @@ import time
 import copy
 import logging
 
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(level=logging.INFO,
+                    format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
 # API_URL
@@ -118,9 +119,11 @@ def get_favorite(bduss):
         if 'forum_list' not in res:
             continue
         if 'non-gconforum' in res['forum_list']:
-            returnData['forum_list']['non-gconforum'].append(res['forum_list']['non-gconforum'])
+            returnData['forum_list']['non-gconforum'].append(
+                res['forum_list']['non-gconforum'])
         if 'gconforum' in res['forum_list']:
-            returnData['forum_list']['gconforum'].append(res['forum_list']['gconforum'])
+            returnData['forum_list']['gconforum'].append(
+                res['forum_list']['gconforum'])
 
     t = []
     for i in returnData['forum_list']['non-gconforum']:
@@ -161,7 +164,8 @@ def client_sign(bduss, tbs, fid, kw):
     # 客户端签到
     logger.info("开始签到")
     data = copy.copy(SIGN_DATA)
-    data.update({BDUSS: bduss, FID: fid, KW: kw, TBS: tbs, TIMESTAMP: str(int(time.time()))})
+    data.update({BDUSS: bduss, FID: fid, KW: kw, TBS: tbs,
+                 TIMESTAMP: str(int(time.time()))})
     data = encodeData(data)
     res = s.post(url=SIGN_URL, data=data, timeout=5).json()
     return res
